@@ -35,9 +35,9 @@ export default function SplashScreen() {
                 useNativeDriver: true,
             }).start(() => {
                 if (isLogin) {
-                    NavAction.replace(navigationKeys.BottomTabNavigator);
+                    NavAction.reset(0, [{ name: navigationKeys.BottomTabNavigator }]);
                 } else {
-                    NavAction.replace(navigationKeys.LoginScreen);
+                    NavAction.reset(0, [{ name: navigationKeys.LoginScreen }]);
                 }
             });
         }, 2200);
